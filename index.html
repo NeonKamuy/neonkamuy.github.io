@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./res/css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://kenwheeler.github.io/slick/slick/slick-theme.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <link href="https://vjs.zencdn.net/7.6.6/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.6.6/video.js"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=81947a92-5c2a-43e5-be31-4b14b4474888&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script type="text/javascript" src="res/js/index.js"></script>
+    <title>1st CHOICE</title>
+  </head>
+  <body>
+    <div id="header-wrapper">
+      <div id="header">
+        <img id="header-logo" src="./res/images/logo_1st_CHOICE_2colors.png" />
+        <div id="header-nav-buttons">
+          <span class="header-nav-button"
+            ><a href="#choose-wrapper">Подбор корма для питомца</a></span
+          >
+          <span class="header-nav-button"
+            ><a href="#video-wrapper">Видео</a></span
+          >
+          <span class="header-nav-button red"
+            ><a href="#map-wrapper">Где купить</a></span
+          >
+          <div id="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dropdown-menu">
+      <div><a href="#map-wrapper">Купить корм и получить подарок</a></div>
+      <div><a href="#gallery-wrapper">Про корма</a></div>
+      <div>
+        <a href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/"
+          >Подобрать корм</a
+        >
+      </div>
+      <img src="res/images/dropdown-maple.png" />
+    </div>
+
+    <img id="logo" src="./res/images/logo_1st_CHOICE_2colors.png" />
+    <div id="wrapper">
+      <div class="wrapper-item" id="slider-wrapper">
+        <div id="slider-main">
+          <div class="active-slider-items">
+            <div>
+              <div id="item1">
+                <img src="res/images/group1.jpg" />
+                <a href="#map"
+                  ><button>Купить корм и получить подарок</button>
+                </a>
+                <div class="slider-subtext">
+                  *Количество акционных товаров ограничено
+                </div>
+              </div>
+            </div>
+            <div>
+              <div id="item2">
+                <img src="res/images/group2.jpg" />
+                <a
+                  href="https://russia.1stchoicepetfood.com/ru-ru/health-benefits/"
+                  ><button>Узнать больше</button>
+                </a>
+                <div class="slider-subtext">
+                  *Количество акционных товаров ограничено
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="slider-mobile">
+          <img src="res/images/1stChoice_600x600.jpg" />
+          <a href="#map-wrapper">
+            <button>Купить корм и получить подарок</button>
+          </a>
+        </div>
+      </div>
+      <div class="wrapper-item" id="gallery-wrapper">
+        <div id="gallery">
+          <div class="gallery-header">1st CHOICE</div>
+          <div class="arrow-left"></div>
+          <div class="active-gallery-items">
+            <div>
+              <div class="gallery-item">
+                <img
+                  class="gallery-item-img"
+                  src="res/images/gallery-img-1.jpg"
+                />
+                <div class="gallery-item-text">
+                  Корм для домашних кошек с цыпленком
+                </div>
+                <a
+                  href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/adult-1-10-years/all-breeds/chicken/indoor-vitality/"
+                >
+                  <button class="gallery-item-button">Подробнее</button>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="gallery-item">
+                <img
+                  class="gallery-item-img"
+                  src="res/images/gallery-img-2.jpg"
+                />
+                <div class="gallery-item-text">
+                  Корм для кошек гипоаллергенный без зерна, утка с картофелем
+                </div>
+                <a
+                  href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/?age=adult&health_benefit=27#list"
+                >
+                  <button class="gallery-item-button">Подробнее</button>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="gallery-item">
+                <img
+                  class="gallery-item-img"
+                  src="res/images/gallery-img-3.jpg"
+                />
+                <div class="gallery-item-text">
+                  Корм для кошек<br />Здоровая кожа и шерсть, курица
+                </div>
+                <a
+                  href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/?age=adult&health_benefit=32#list"
+                >
+                  <button class="gallery-item-button">Подробнее</button>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="gallery-item">
+                <img
+                  class="gallery-item-img"
+                  src="res/images/gallery-img-4.jpg"
+                />
+                <div class="gallery-item-text">
+                  Корм для зрелых и пожилых кошек с цыпленком
+                </div>
+                <a
+                  href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/?age=senior&health_benefit=all#list"
+                >
+                  <button class="gallery-item-button">Подробнее</button>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="gallery-item">
+                <img
+                  class="gallery-item-img"
+                  src="res/images/gallery-img-5.jpg"
+                />
+                <div class="gallery-item-text">
+                  Корм для стерилизованных кошек, курица с бататом
+                </div>
+                <a
+                  href=" https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/?age=adult&health_benefit=48#list"
+                >
+                  <button class="gallery-item-button">Подробнее</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="arrow-right"></div>
+        </div>
+      </div>
+      <div class="wrapper-item" id="meat-wrapper">
+        <div id="meat-block">
+          <img id="meat-img" src="res/images/meat.jpg" />
+          <div id="meat-text">
+            <div class="red">Первый выбор!</div>
+            <div class="black">
+              Потому, что вы <br />заботитесь<br />о вашем питомце
+            </div>
+            <div class="subtext">
+              Высушенное мясо в основе!<br />
+              Без сои, пшеницы и кукурузы!<br />
+              Соответствуют специфическим потребностям кошек!<br />
+              Превосходный вкус!
+            </div>
+            <button>Узнать большe</button>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-item" id="infographic-wrapper">
+        <div id="infographic">
+          <div id="infographic-header">Функциональные добавки</div>
+          <div id="infographic-subheader">
+            Помогут сохранить и укрепить здоровье вашей кошки
+          </div>
+          <div id="infographic-items">
+            <div class="infographic-row">
+              <div class="infographic-item">
+                <img src="res/images/infographic/1.png" />
+                <div>
+                  Разработано экспертами в области кормления домашних кошек
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/2.png" />
+                <div>
+                  Способствует здоровому развитию мозга и остроте ума
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/3.png" />
+                <div>
+                  Система естественного вывода шерсти без срыгивания
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/4.png" />
+                <div>
+                  Способствует свежему дыханию и гигиене гигиены полости рта
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/5.png" />
+                <div>
+                  Корма богаты таурином - незаменимой аминокислотой для
+                  здорового сердца
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/6.png" />
+                <div>
+                  L-цистин и омега-3-6-9 жирные кислоты для здоровой кожи и
+                  блестящей шерсти
+                </div>
+              </div>
+            </div>
+
+            <div class="infographic-row">
+              <div class="infographic-item">
+                <img src="res/images/infographic/7.png" />
+                <div>
+                  Отсутсвия неприятного запаха от кошки
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/8.png" />
+                <div>
+                  Отсуствие зерновых компонентов и аллегрческих реакций
+                  связанных с ними
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/9.png" />
+                <div>
+                  Антиоксиданты способствуют замедлению старения
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/10.png" />
+                <div>
+                  Способствует укреплению суствов и костей у возрастных кошек
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/11.png" />
+                <div>
+                  Улучшает пищеварение и стабилизирует работу кишечника
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/12.png" />
+                <div>
+                  Преботики помогают повышению иммунитета
+                </div>
+              </div>
+            </div>
+
+            <div class="infographic-row">
+              <div class="infographic-item">
+                <img src="res/images/infographic/13.png" />
+                <div>
+                  Источник дополнительной энергии для активных кошек
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/14.png" />
+                <div>
+                  Отличный вкус и высокая поедаемость корма
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/15.png" />
+                <div>
+                  Профилактика мочекаменной болезни
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/16.png" />
+                <div>
+                  Обладает лечебным эффектом, нормализуя pH и предупреждая
+                  развитие мочекаменных болезней
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/17.png" />
+                <div>
+                  Низкий уровень содержания магния и фосфора для профилактики
+                  мочекаменной болезни
+                </div>
+              </div>
+              <div class="infographic-item">
+                <img src="res/images/infographic/18.png" />
+                <div>
+                  Экстракт клюквы как антиоксидант и подкислитель для
+                  профилактики МКБ
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-item" id="choose-wrapper">
+        <div id="choose">
+          <div id="choose-text">
+            <div class="red">Какой корм</div>
+            <div class="black">Подойдет вашему питомцу?</div>
+            <div class="subtext">
+              Разработанная экспертами питания линия 1st Choice, учитывает
+              различия в пищевых потребностях животного в зависимоти от
+              возраста, типа шерсти, темперамента и условий содержания. В каждой
+              современной формуле питания 1st Choice используются ингредиенты
+              высшего качества, без содержания субпродуктов мясокостной муки.
+            </div>
+            <a
+              href="https://russia.1stchoicepetfood.com/ru-ru/products/1st/cat/"
+              ><button>Подобрать корм</button></a
+            >
+          </div>
+          <img id="choose-img" src="res/images/choose-img.jpg" />
+        </div>
+      </div>
+      <div style="display: none;"></div>
+      <div class="wrapper-item" id="choose-mobile-wrapper">
+        <img
+          id="choose-mobile-logo"
+          src="res/images/logo_1st_CHOICE_2colors.png"
+        />
+        <img id="choose-mobile-img" src="res/images/choose-img.jpg" />
+        <div id="choose-mobile-text">
+          <div class="red">Первый выбор!</div>
+          <div class="black">
+            Потому, что вы <br />заботитесь<br />о вашем питомце
+          </div>
+          <div class="subtext">
+            Высушенное мясо в основе!<br />
+            Без сои, пшеницы и кукурузы!<br />
+            Соответствуют специфическим потребностям кошек!<br />
+            Превосходный вкус!
+          </div>
+          <button>Узнать большe</button>
+        </div>
+      </div>
+
+      <div class="wrapper-item" id="map-wrapper">
+        <div id="map">
+          <div class="header">КУПИТЬ 1st CHOICE</div>
+          <div class="buttons">
+            <button id="use-current-location">
+              <div class="icon"></div>
+              Иcпользовать мое текущее местоположение
+            </button>
+            <button id="buy-online">
+              <div class="icon"></div>
+              Купить онлайн
+            </button>
+          </div>
+          <div id="map-widget"></div>
+        </div>
+      </div>
+      <div class="wrapper-item" id="video-wrapper">
+        <video id="video" class="video-js" controls preload="auto">
+          <source src="res/videos/Wet food - International.mp4" />
+        </video>
+      </div>
+    </div>
+    <div id="footer-wrapper">
+      <div id="footer">
+        <div id="footer-copiright-logo">
+          <span id="copyright">© 2020</span>
+          <img
+            id="footer-logo"
+            src="./res/images/logo_1st_CHOICE_2colors.png"
+          />
+        </div>
+        <div id="footer-buttons">
+          <div id="footer-nav-buttons">
+            <span class="footer-nav-button"
+              ><a href="#choose-wrapper">Подбор корма для питомца</a></span
+            >
+            <span class="footer-nav-button"
+              ><a href="#video-wrapper">Видео</a></span
+            >
+            <span class="footer-nav-button red"
+              ><a href="#map-wrapper">Где купить</a></span
+            >
+          </div>
+          <div id="footer-socials">
+            <span>Следите за новостями 1st Choice: </span>
+            <a href="https://vk.com/1stchoice.russia"
+              ><div class="socials" id="vk-social"></div
+            ></a>
+            <a href="https://www.facebook.com/groups/1stchoice.ru/"
+              ><div class="socials" id="fb-social"></div
+            ></a>
+            <a href="https://www.instagram.com/1stchoice.ru/"
+              ><div class="socials" id="instagram-social"></div
+            ></a>
+            <a href="https://www.youtube.com/channel/UCsOTy9lVxv8kPuRQjGI42ZA"
+              ><div class="socials" id="youtube-social"></div
+            ></a>
+          </div>
+        </div>
+        <div id="footer-contacts">
+          <a href="https://russia.1stchoicepetfood.com/ru-ru/contact/">
+            <div id="footer-chat">
+              <span>Свяжитесь с нами</span>
+              <div class="socials" id="footer-chat-icon"></div>
+            </div>
+          </a>
+          <div id="footer-phone">
+            <div class="socials" id="footer-phone-icon"></div>
+            <span>+7 (800) 3333 845</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
