@@ -38,7 +38,7 @@ $(document).ready(function() {
           nextArrow: $(".arrow-right"),
           slidesToShow: 3,
           arrows: true,
-          dots: false
+          dots: true
         }
       }
     ]
