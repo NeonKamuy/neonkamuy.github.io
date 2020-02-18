@@ -54,6 +54,14 @@ $(document).ready(function() {
   //   dots: false
   // });
 
+  /// Popup
+  const popup = document.getElementById("buy-online-popup");
+  document.getElementById("buy-online").addEventListener("click", () => {
+    popup.style.display = "block";
+  });
+  document.getElementById("close-popup").addEventListener("click", () => {
+    popup.style.display = "none";
+  });
   ///  Sticky header
   (() => {
     let headerStickHeight = 700;
