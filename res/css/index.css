@@ -161,6 +161,7 @@ a {
 /*************** Logo  **********************/
 
 #logo {
+  cursor: pointer;
   position: absolute;
   left: 17%;
   top: 50px;
@@ -1098,6 +1099,7 @@ a {
     display: none;
   }
   #header-logo {
+    cursor: pointer;
     height: 90%;
   }
   #nav-hamburger {
@@ -1572,6 +1574,7 @@ a {
     width: 35vw;
     left: 5vw;
     top: 5vw;
+    cursor: pointer;
   }
 
   #footer-contacts {
