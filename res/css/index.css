@@ -1346,16 +1346,18 @@ a {
   }
   #slider-mobile-text .subtext {
     font-weight: medium;
+    font-family: "PFDinTextPro";
     color: rgb(110, 110, 110);
     width: 60vw;
     margin-top: 10px;
+    font-size: 4vw;
   }
   #slider-mobile button {
     display: block;
     margin: 5vw auto;
     background-color: rgb(255, 0, 0);
     width: 60vw;
-    height: 10vw;
+    height: 14vw;
     text-transform: uppercase;
     font-size: 3vw;
     font-family: "PFDinTextCondPro";
@@ -1438,7 +1440,7 @@ a {
   }
 
   #choose-mobile-text > .red {
-    font-size: 6vw;
+    font-size: 8vw;
     font-family: "PFDinTextCondPro";
     color: rgb(245, 22, 22);
     font-weight: bold;
