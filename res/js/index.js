@@ -20,7 +20,7 @@ $(document).ready(function() {
     }
   });
 
-  ///  Main Slider
+  /// gallery
   $(".active-gallery-items").slick({
     arrows: false,
     dots: true,
@@ -44,15 +44,15 @@ $(document).ready(function() {
     ]
   });
 
-  /// gallery
-  $(".active-slider-items").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    arrows: false,
-    dots: false
-  });
+  //   ///  Main Slider
+  // $(".active-slider-items").slick({
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 5000,
+  //   arrows: false,
+  //   dots: false
+  // });
 
   ///  Sticky header
   (() => {

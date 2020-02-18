@@ -72,6 +72,45 @@
     <div id="wrapper">
       <div class="wrapper-item" id="slider-wrapper">
         <div id="slider-main">
+          <img id="slider-image" src="res/images/group1.png" />
+          <div id="slider-text">
+            <div class="red">
+              Вкусный подарок
+            </div>
+            <div class="black">
+              Для вашего питомца!
+            </div>
+            <div class="subtext">
+              При покупке 350г упаковки корма 1st CHOICE - натуральные,
+              беззерновые консервы из филе курицы, лосося или утки в подарок.
+            </div>
+            <img class="label" src="res/images/group1-label.png" />
+            <a href="#map"><button>Купить корм и получить подарок</button></a>
+          </div>
+        </div>
+        <div id="slider-mobile">
+          <img
+            id="slider-mobile-image"
+            src="res/images/1stChoice_600x600.png"
+          />
+          <div id="slider-mobile-text">
+            <div class="red">
+              Вкусный подарок
+            </div>
+            <div class="black">
+              Для вашего питомца!
+            </div>
+            <div class="subtext">
+              При покупке 350г упаковки корма 1st CHOICE - натуральные,
+              беззерновые консервы из филе курицы, лосося или утки в подарок.
+            </div>
+            <img class="label" src="res/images/group1-label.png" />
+            <a href="#map"><button>Купить корм и получить подарок</button></a>
+          </div>
+        </div>
+      </div>
+      <!--
+        <div id="slider-main">
           <div class="active-slider-items">
             <div>
               <div id="item1">
@@ -98,13 +137,8 @@
             </div>
           </div>
         </div>
-        <div id="slider-mobile">
-          <img src="res/images/1stChoice_600x600.jpg" />
-          <a href="#map-wrapper">
-            <button>Купить корм и получить подарок</button>
-          </a>
-        </div>
-      </div>
+        -->
+
       <div class="wrapper-item" id="gallery-wrapper">
         <div id="gallery">
           <div class="gallery-header">1st CHOICE</div>
@@ -403,7 +437,13 @@
         </div>
       </div>
       <div class="wrapper-item" id="video-wrapper">
-        <video id="video" class="video-js" controls preload="auto">
+        <video
+          id="video"
+          class="video-js"
+          controls
+          preload="metadata"
+          poster="res/images/video-preview.jpg"
+        >
           <source src="res/videos/Wet food - International.mp4" />
         </video>
       </div>
