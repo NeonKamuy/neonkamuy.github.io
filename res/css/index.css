@@ -60,6 +60,7 @@ a {
 }
 
 #header-logo {
+  cursor: pointer;
   display: none;
   float: left;
   position: absolute;
@@ -788,6 +789,7 @@ a {
 }
 
 #footer-logo {
+  cursor: pointer;
   width: 40%;
   margin-bottom: -5px;
 }
