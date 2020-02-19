@@ -1731,7 +1731,7 @@ a {
     left: -5vw;
   }
   #buy-online-popup-mobile-items > .buy-online-popup-row.header > .text {
-    font-size: 4vw;
+    font-size: 5vw;
     font-family: "PFDinTextPro";
     color: rgb(145, 145, 145);
     font-weight: bold;
@@ -1743,7 +1743,7 @@ a {
   }
   #buy-online-popup-mobile-items > .buy-online-popup-row.header > img {
     margin-left: 1vw;
-    width: 15vw;
+    width: 20vw;
   }
 
   #buy-online-popup-mobile-items .buy-online-popup-item {
@@ -1765,6 +1765,7 @@ a {
   }
   #buy-online-popup-mobile-items .buy-online-popup-item > div {
     position: absolute;
+    font-size: 80%;
     bottom: 2.5%;
     height: 35%;
     width: 100%;
@@ -1773,7 +1774,7 @@ a {
 
   .close-popup {
     position: absolute;
-    right: -15vw;
+    right: -13vw;
     top: 1vw;
     max-width: 15px;
   }
