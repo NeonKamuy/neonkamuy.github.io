@@ -59,9 +59,19 @@ $(document).ready(function() {
   document.getElementById("buy-online").addEventListener("click", () => {
     popup.style.display = "block";
   });
-  document.getElementById("close-popup").addEventListener("click", () => {
-    popup.style.display = "none";
+  window.addEventListener("click", e => {
+    if (e.target.id === "buy-online-popup") {
+      popup.style.display = "none";
+    }
   });
+
+  const close_buttons = document.getElementsByClassName("close-popup");
+  for (let i = 0; i != close_buttons.length; ++i) {
+    close_buttons[i].addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+  }
+
   ///  Sticky header
   (() => {
     let headerStickHeight = 700;
