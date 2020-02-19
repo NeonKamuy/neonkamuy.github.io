@@ -1767,7 +1767,7 @@ a {
   }
   #buy-online-popup-mobile-items .buy-online-popup-item > div {
     position: absolute;
-    font-size: 80%;
+    font-size: 0.7em;
     bottom: 2.5%;
     height: 35%;
     width: 100%;
