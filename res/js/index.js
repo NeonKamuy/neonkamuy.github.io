@@ -162,7 +162,7 @@ function placeMarks(addresses) {
         },
         {
           iconLayout: "default#image",
-          iconImageHref: "/res/images/mapicon.png",
+          iconImageHref: document.location.pathname + "res/images/mapicon.png",
           iconImageSize: [50, 50]
         }
       )
