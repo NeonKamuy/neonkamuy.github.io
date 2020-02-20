@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat;
+=======
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff
+    url("https://kenwheeler.github.io/slick/slick/ajax-loader.gif") center
+    center no-repeat;
+>>>>>>> 3c2dc7b5be9aa2a3682a50e344bd76ae47ec773f
 }
 
 /* Icons */
@@ -8,11 +16,23 @@
   font-weight: normal;
   font-style: normal;
 
+<<<<<<< HEAD
   src: url("./fonts/slick.eot");
   src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
     url("./fonts/slick.woff") format("woff"),
     url("./fonts/slick.ttf") format("truetype"),
     url("./fonts/slick.svg#slick") format("svg");
+=======
+  src: url("https://kenwheeler.github.io/slick/slick/fonts/slick.eot");
+  src: url("https://kenwheeler.github.io/slick/slick/fonts/slick.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://kenwheeler.github.io/slick/slick/fonts/slick.woff")
+      format("woff"),
+    url("https://kenwheeler.github.io/slick/slick/fonts/slick.ttf")
+      format("truetype"),
+    url("https://kenwheeler.github.io/slick/slick/fonts/slick.svg#slick")
+      format("svg");
+>>>>>>> 3c2dc7b5be9aa2a3682a50e344bd76ae47ec773f
 }
 /* Arrows */
 .slick-prev,

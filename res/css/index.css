@@ -264,6 +264,7 @@ a {
   cursor: pointer;
   right: 0%;
   bottom: 10%;
+  border: none;
 }
 
 #slider-text button:hover {
@@ -389,12 +390,6 @@ a {
   background-color: rgb(255, 255, 255);
 }
 
-.gallery-item:hover {
-  -webkit-box-shadow: 0px 0px 84px -1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 84px -1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 84px -1px rgba(0, 0, 0, 0.1);
-}
-
 .gallery-item-img {
   margin-left: 20%;
   padding-top: 7%;
@@ -497,6 +492,7 @@ a {
   font-weight: bold;
   border-radius: 50px 50px;
   cursor: pointer;
+  border: none;
 }
 
 #meat-text > button:hover {
@@ -651,6 +647,7 @@ a {
   font-weight: medium;
   border-radius: 50px 50px;
   cursor: pointer;
+  border: none;
 }
 
 #choose-text button:hover {
@@ -1633,6 +1630,7 @@ a {
     font-weight: bold;
     border-radius: 50px 50px;
     cursor: pointer;
+    border: none;
   }
 
   #choose-mobile-text button:hover {

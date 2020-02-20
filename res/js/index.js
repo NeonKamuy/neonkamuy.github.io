@@ -10,7 +10,7 @@ $(document).ready(function() {
       var hash = this.hash;
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top
+          scrollTop: $(hash).offset().top,
         },
         800,
         function() {
@@ -38,10 +38,10 @@ $(document).ready(function() {
           nextArrow: $(".arrow-right"),
           slidesToShow: 3,
           arrows: true,
-          dots: true
-        }
-      }
-    ]
+          dots: true,
+        },
+      },
+    ],
   });
 
   //   ///  Main Slider
@@ -100,17 +100,17 @@ $(document).ready(function() {
 
   /// Dropdown menu
   const dropDown = document.getElementById("dropdown-menu");
-  let isVisible = false;
-  document.getElementById("nav-hamburger").addEventListener("click", () => {
-    dropDown.style.display = isVisible ? "none" : "block";
-    isVisible = !isVisible;
-  });
-  window.addEventListener("click", e => {
-    if (e.path[1].id === "nav-hamburger") return;
 
-    dropDown.style.display = "none";
-    isVisible = false;
+  const dropDownHideListener = e => {
+    if (e.target.id !== "dropdown-menu") {
+      dropDown.style.display = "none";
+    }
+  };
+  document.getElementById("nav-hamburger").addEventListener("click", e => {
+    dropDown.style.display = "block";
   });
+
+  window.addEventListener("click", dropDownHideListener);
 
   /// Geolocation
   initGeolocation();
@@ -124,7 +124,7 @@ function initGeolocation() {
     .then(() => {
       map = new ymaps.Map("map-widget", {
         center: [55.76, 37.64],
-        zoom: 4
+        zoom: 4,
       });
     })
     .then(() => getAddresses())
@@ -157,7 +157,7 @@ function nearbyPlaces() {
           center,
           zoom,
           duration: 500,
-          timingFunction: "ease-in"
+          timingFunction: "ease-in",
         })
       );
     },
@@ -205,20 +205,20 @@ function placeMarks(addresses) {
           balloonContent: [
             `<div>Название: ${address.name}</div>`,
             `<div>Адрес: ${address.address}</div>`,
-            `<div>Координаты: ${address.latitude}, ${address.longitude}</div>`
-          ].join("")
+            `<div>Координаты: ${address.latitude}, ${address.longitude}</div>`,
+          ].join(""),
         },
         {
           iconLayout: "default#image",
           iconImageHref: "/res/images/mapicon.png",
-          iconImageSize: [50, 50]
+          iconImageSize: [50, 50],
         }
       )
     );
   }
 
   const clusterer = new ymaps.Clusterer({
-    preset: "islands#redClusterIcons"
+    preset: "islands#redClusterIcons",
   });
   map.geoObjects.add(clusterer);
   clusterer.add(geoObjects);
@@ -227,7 +227,7 @@ function placeMarks(addresses) {
 function getAddresses() {
   return new Promise((resolve, reject) => {
     const XHR = new XMLHttpRequest();
-    XHR.open("GET", "/res/json/addresses.json");
+    XHR.open("GET", document.location.pathname + "res/json/addresses.json");
     XHR.send();
     XHR.onreadystatechange = () => {
       if (XHR.readyState === XHR.DONE && XHR.status === 200) {
