@@ -191,12 +191,12 @@ function nearbyPlaces() {
       const coords = e.geoObjects.position;
       console.log("Координаты:", coords);
 
-      console.log(marks.getClosestTo(coords));
+      const closest = marks.getClosestTo(coords);
 
       map.action.execute(
         new ymaps.map.action.Single({
-          center,
-          zoom,
+          center: closest,
+          zoom: 15,
           duration: 500,
           timingFunction: "ease-in"
         })
