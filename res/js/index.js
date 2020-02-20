@@ -176,7 +176,7 @@ function isInSpb(latitude, longitude) {
   );
   console.log("Расстояние до центра СПБ:", Math.floor(distance), " метров");
 
-  const radius = 100000;
+  const radius = 1000000;
   return distance < radius;
 }
 
@@ -188,7 +188,7 @@ function isInMoscow(latitude, longitude) {
     msk
   );
   console.log("Расстояние до центра Москвы:", Math.floor(distance), " метров");
-  const radius = 700000;
+  const radius = 7000000;
   return distance < radius;
 }
 
