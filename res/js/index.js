@@ -175,7 +175,7 @@ function isInSpb(latitude, longitude) {
   console.log("Проверяем, находится ли пользователь в СПБ");
 
   const distance = ymaps.coordSystem.geo.getDistance(
-    [latitude, longitude],
+    [longitude, latitude],
     spb
   );
   console.log("Расстояние до центра СПБ:", Math.floor(distance), " метров");
@@ -188,7 +188,7 @@ function isInMoscow(latitude, longitude) {
   console.log("Проверяем, находится ли пользователь в Москве");
 
   const distance = ymaps.coordSystem.geo.getDistance(
-    [latitude, longitude],
+    [longitude, latitude],
     msk
   );
   console.log("Расстояние до центра Москвы:", Math.floor(distance), " метров");
