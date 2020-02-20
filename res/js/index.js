@@ -101,11 +101,14 @@ $(document).ready(function() {
   /// Dropdown menu
   const dropDown = document.getElementById("dropdown-menu");
   let isVisible = false;
-  const dropDownHideListener = ()=>
-	  dropDown.style.display = "none";
+  const dropDownHideListener = e => {
+	  if(e.target.id !== "dropdown-menu"){
+		  dropDown.style.display = "none";
+	  }
+  }
   
-  document.getElementById("nav-hamburger").addEventListener("click", () => {
-	if(isVisible){
+  document.getElementById("nav-hamburger").addEventListener("click", e => {
+	if(isVisible && e.target.id !== "dropdown-menu"){
 		dropDown.style.display = "none";
 		window.removeEventListener("click", dropDownHideListener)
 	} else {
