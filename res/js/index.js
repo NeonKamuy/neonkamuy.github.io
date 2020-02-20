@@ -126,7 +126,8 @@ function initGeolocation() {
         "map-widget",
         {
           center: [55.76, 37.64],
-          zoom: 4
+          zoom: 4,
+          maxZoom: 15
         },
         { searchControlProvider: "yandex#search" }
       );
@@ -148,13 +149,7 @@ function nearbyPlaces() {
       const coords = e.geoObjects.position;
       console.log("Координаты:", coords);
 
-      let center = [55.4507, 37.3656];
-      let zoom = 3;
-
-      if (isInMoscow(coords[0], coords[1]) || isInSpb(coords[0], coords[1])) {
-        center = coords;
-        zoom = 15;
-      }
+      geoObjects.getClosestTo(coords);
 
       map.action.execute(
         new ymaps.map.action.Single({
@@ -171,33 +166,8 @@ function nearbyPlaces() {
   );
 }
 
-function isInSpb(latitude, longitude) {
-  console.log("Проверяем, находится ли пользователь в СПБ");
-
-  const distance = ymaps.coordSystem.geo.getDistance(
-    [longitude, latitude],
-    spb
-  );
-  console.log("Расстояние до центра СПБ:", Math.floor(distance), " метров");
-
-  const radius = 1000000;
-  return distance < radius;
-}
-
-function isInMoscow(latitude, longitude) {
-  console.log("Проверяем, находится ли пользователь в Москве");
-
-  const distance = ymaps.coordSystem.geo.getDistance(
-    [longitude, latitude],
-    msk
-  );
-  console.log("Расстояние до центра Москвы:", Math.floor(distance), " метров");
-  const radius = 7000000;
-  return distance < radius;
-}
-
+const geoObjects = [];
 function placeMarks(addresses) {
-  const geoObjects = [];
   for (let i = 0; i != addresses.length; ++i) {
     const address = addresses[i];
 
