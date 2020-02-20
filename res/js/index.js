@@ -141,32 +141,7 @@ function initGeolocation() {
     });
 }
 
-function nearbyPlaces() {
-  ymaps.geolocation.get().then(
-    e => {
-      console.log(e);
-      console.log("Вычисляем местоположение");
-      const coords = e.geoObjects.position;
-      console.log("Координаты:", coords);
-
-      console.log(marks.getClosestTo(coords));
-
-      map.action.execute(
-        new ymaps.map.action.Single({
-          center,
-          zoom,
-          duration: 500,
-          timingFunction: "ease-in"
-        })
-      );
-    },
-    () => {
-      alert("Похоже, что вы заблокировали геолокацию для этой страницы");
-    }
-  );
-}
-
-const marks = [];
+let marks = marks;
 function placeMarks(addresses) {
   const geoObjects = [];
   const geoQuery = [];
@@ -206,6 +181,31 @@ function placeMarks(addresses) {
   });
   map.geoObjects.add(clusterer);
   clusterer.add(geoObjects);
+}
+
+function nearbyPlaces() {
+  ymaps.geolocation.get().then(
+    e => {
+      console.log(e);
+      console.log("Вычисляем местоположение");
+      const coords = e.geoObjects.position;
+      console.log("Координаты:", coords);
+
+      console.log(marks.getClosestTo(coords));
+
+      map.action.execute(
+        new ymaps.map.action.Single({
+          center,
+          zoom,
+          duration: 500,
+          timingFunction: "ease-in"
+        })
+      );
+    },
+    () => {
+      alert("Похоже, что вы заблокировали геолокацию для этой страницы");
+    }
+  );
 }
 
 function getAddresses() {
