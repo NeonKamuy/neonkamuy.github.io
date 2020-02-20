@@ -100,17 +100,17 @@ $(document).ready(function() {
 
   /// Dropdown menu
   const dropDown = document.getElementById("dropdown-menu");
-  let isVisible = false;
-  document.getElementById("nav-hamburger").addEventListener("click", () => {
-    dropDown.style.display = isVisible ? "none" : "block";
-    isVisible = !isVisible;
-  });
-  window.addEventListener("click", e => {
-    if (e.path[1].id === "nav-hamburger") return;
 
-    dropDown.style.display = "none";
-    isVisible = false;
+  const dropDownHideListener = e => {
+    if (e.target.id !== "dropdown-menu") {
+      dropDown.style.display = "none";
+    }
+  };
+  document.getElementById("nav-hamburger").addEventListener("click", e => {
+    dropDown.style.display = "block";
   });
+
+  window.addEventListener("click", dropDownHideListener);
 
   /// Geolocation
   initGeolocation();
@@ -136,71 +136,64 @@ function initGeolocation() {
     });
 }
 
-// function nearbyPlaces() {
-//   ymaps.geolocation.get().then(
-//     e => {
-//       console.log(e);
-//       console.log("Вычисляем местоположение");
-//       const coords = e.geoObjects.position;
-//       console.log("Координаты:", coords);
+function nearbyPlaces() {
+  ymaps.geolocation.get().then(
+    e => {
+      console.log(e);
+      console.log("Вычисляем местоположение");
+      const coords = e.geoObjects.position;
+      console.log("Координаты:", coords);
 
-//       let center = [55.4507, 37.3656];
-//       let zoom = 3;
+      let center = [55.4507, 37.3656];
+      let zoom = 3;
 
-//       if (isInMoscow(coords[0], coords[1]) || isInSpb(coords[0], coords[1])) {
-//         center = coords;
-//         zoom = 9;
-//       }
+      if (isInMoscow(coords[0], coords[1]) || isInSpb(coords[0], coords[1])) {
+        center = coords;
+        zoom = 9;
+      }
 
-//       map.action.execute(
-//         new ymaps.map.action.Single({
-//           center,
-//           zoom,
-//           duration: 500,
-//           timingFunction: "ease-in",
-//         })
-//       );
-//     },
-//     () => {
-//       alert("Похоже, что вы заблокировали геолокацию для этой страницы");
-//     }
-//   );
-// }
+      map.action.execute(
+        new ymaps.map.action.Single({
+          center,
+          zoom,
+          duration: 500,
+          timingFunction: "ease-in",
+        })
+      );
+    },
+    () => {
+      alert("Похоже, что вы заблокировали геолокацию для этой страницы");
+    }
+  );
+}
 
-// function isInSpb(latitude, longitude) {
-//   console.log("Проверяем, находится ли пользователь в СПБ");
+function isInSpb(latitude, longitude) {
+  console.log("Проверяем, находится ли пользователь в СПБ");
 
-//   const distance = ymaps.coordSystem.geo.getDistance(
-//     [latitude, longitude],
-//     spb
-//   );
-//   console.log("Расстояние до центра СПБ:", Math.floor(distance), " метров");
+  const distance = ymaps.coordSystem.geo.getDistance(
+    [latitude, longitude],
+    spb
+  );
+  console.log("Расстояние до центра СПБ:", Math.floor(distance), " метров");
 
-//   const radius = 100000;
-//   return distance < radius;
-// }
+  const radius = 100000;
+  return distance < radius;
+}
 
-// function isInMoscow(latitude, longitude) {
-//   console.log("Проверяем, находится ли пользователь в Москве");
+function isInMoscow(latitude, longitude) {
+  console.log("Проверяем, находится ли пользователь в Москве");
 
-//   const distance = ymaps.coordSystem.geo.getDistance(
-//     [latitude, longitude],
-//     msk
-//   );
-//   console.log("Расстояние до центра Москвы:", Math.floor(distance), " метров");
-//   const radius = 700000;
-//   return distance < radius;
-// }
-
-const geoObjects = [];
-function getClosest() {
-  ymaps.geolocation.get().then(e => {
-    const coords = e.geoObjects.position;
-    geoObjects.getClosestTo(coords).balloon.open();
-  });
+  const distance = ymaps.coordSystem.geo.getDistance(
+    [latitude, longitude],
+    msk
+  );
+  console.log("Расстояние до центра Москвы:", Math.floor(distance), " метров");
+  const radius = 700000;
+  return distance < radius;
 }
 
 function placeMarks(addresses) {
+  const geoObjects = [];
   for (let i = 0; i != addresses.length; ++i) {
     const address = addresses[i];
 
@@ -217,7 +210,7 @@ function placeMarks(addresses) {
         },
         {
           iconLayout: "default#image",
-          iconImageHref: document.location.pathname + "res/images/mapicon.png",
+          iconImageHref: "/res/images/mapicon.png",
           iconImageSize: [50, 50],
         }
       )
