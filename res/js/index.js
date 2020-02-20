@@ -191,7 +191,8 @@ function nearbyPlaces() {
       const coords = e.geoObjects.position;
       console.log("Координаты:", coords);
 
-      const closest = marks.getClosestTo(coords);
+      const closest = marks.getClosestTo(coords).geoObjects.position;
+      console.log("Ближайшая точка: ", closest);
 
       map.action.execute(
         new ymaps.map.action.Single({
