@@ -149,7 +149,7 @@ function nearbyPlaces() {
       const coords = e.geoObjects.position;
       console.log("Координаты:", coords);
 
-      console.log(geoObjects.getClosestTo(coords));
+      console.log(marks.getClosestTo(coords));
 
       map.action.execute(
         new ymaps.map.action.Single({
@@ -166,6 +166,7 @@ function nearbyPlaces() {
   );
 }
 
+const marks = [];
 function placeMarks(addresses) {
   const geoObjects = [];
   const geoQuery = [];
@@ -198,7 +199,7 @@ function placeMarks(addresses) {
     });
   }
 
-  ymaps.geoQuery(geoQuery).addToMap(map);
+  marks = ymaps.geoQuery(geoQuery);
 
   const clusterer = new ymaps.Clusterer({
     preset: "islands#redClusterIcons"
