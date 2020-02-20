@@ -113,7 +113,7 @@ $(document).ready(function() {
 		window.removeEventListener("click", dropDownHideListener)
 	} else {
 		dropDown.style.display = "block";
-		window.addEventListener("click", dropDownHideListener, {once: true})
+		setTimeout(10, ()=>window.addEventListener("click", dropDownHideListener, {once: true}))
 	}
 	
 	isVisible = !isVisible;
