@@ -1880,35 +1880,35 @@ a {
 @font-face {
   font-family: "PFDinTextCondPro";
   font-weight: normal;
-  src: url("../../fonts/pfdintextcondpro-regular.ttf");
+  src: url("../fonts/pfdintextcondpro-regular.ttf");
 }
 
 @font-face {
   font-family: "PFDinTextCondPro";
   font-weight: bold;
-  src: url("../../fonts/pfdintextcondpro-bold.ttf");
+  src: url("../fonts/pfdintextcondpro-bold.ttf");
 }
 
 @font-face {
   font-family: "PFDinTextCondPro";
   font-weight: medium;
-  src: url("../../fonts/pfdintextcondpro-medium.ttf");
+  src: url("../fonts/pfdintextcondpro-medium.ttf");
 }
 
 @font-face {
   font-family: "PFDinTextPro";
   font-weight: bold;
-  src: url("../../fonts/pfdintextpro-bold.ttf");
+  src: url("../fonts/pfdintextpro-bold.ttf");
 }
 
 @font-face {
   font-family: "PFDinTextPro";
   font-weight: medium;
-  src: url("../../fonts/pfdintextpro-medium.ttf");
+  src: url("../fonts/pfdintextpro-medium.ttf");
 }
 
 @font-face {
   font-family: "PFDinTextPro";
   font-weight: normal;
-  src: url("../../fonts/pfdintextpro-regular.ttf");
+  src: url("../fonts/pfdintextpro-regular.ttf");
 }
