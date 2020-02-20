@@ -10,7 +10,7 @@ $(document).ready(function() {
       var hash = this.hash;
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top,
+          scrollTop: $(hash).offset().top
         },
         800,
         function() {
@@ -38,10 +38,10 @@ $(document).ready(function() {
           nextArrow: $(".arrow-right"),
           slidesToShow: 3,
           arrows: true,
-          dots: true,
-        },
-      },
-    ],
+          dots: true
+        }
+      }
+    ]
   });
 
   //   ///  Main Slider
@@ -122,10 +122,14 @@ let msk = [37.61556, 55.75222];
 function initGeolocation() {
   new Promise(mapsReady => ymaps.ready(mapsReady))
     .then(() => {
-      map = new ymaps.Map("map-widget", {
-        center: [55.76, 37.64],
-        zoom: 4,
-      });
+      map = new ymaps.Map(
+        "map-widget",
+        {
+          center: [55.76, 37.64],
+          zoom: 4
+        },
+        { searchControlProvider: "yandex#search" }
+      );
     })
     .then(() => getAddresses())
     .catch(e => console.error(e))
@@ -149,7 +153,7 @@ function nearbyPlaces() {
 
       if (isInMoscow(coords[0], coords[1]) || isInSpb(coords[0], coords[1])) {
         center = coords;
-        zoom = 9;
+        zoom = 15;
       }
 
       map.action.execute(
@@ -157,7 +161,7 @@ function nearbyPlaces() {
           center,
           zoom,
           duration: 500,
-          timingFunction: "ease-in",
+          timingFunction: "ease-in"
         })
       );
     },
@@ -205,20 +209,20 @@ function placeMarks(addresses) {
           balloonContent: [
             `<div>Название: ${address.name}</div>`,
             `<div>Адрес: ${address.address}</div>`,
-            `<div>Координаты: ${address.latitude}, ${address.longitude}</div>`,
-          ].join(""),
+            `<div>Координаты: ${address.latitude}, ${address.longitude}</div>`
+          ].join("")
         },
         {
           iconLayout: "default#image",
           iconImageHref: "/res/images/mapicon.png",
-          iconImageSize: [50, 50],
+          iconImageSize: [50, 50]
         }
       )
     );
   }
 
   const clusterer = new ymaps.Clusterer({
-    preset: "islands#redClusterIcons",
+    preset: "islands#redClusterIcons"
   });
   map.geoObjects.add(clusterer);
   clusterer.add(geoObjects);
