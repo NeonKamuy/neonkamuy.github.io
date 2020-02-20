@@ -141,7 +141,7 @@ function initGeolocation() {
     });
 }
 
-let marks = marks;
+let marks = null;
 function placeMarks(addresses) {
   const geoObjects = [];
   const geoQuery = [];
