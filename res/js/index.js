@@ -104,6 +104,7 @@ $(document).ready(function() {
   const dropDownHideListener = e => {
 	  if(e.target.id !== "dropdown-menu"){
 		  dropDown.style.display = "none";
+		  isVisible = false;
 	  }
   }
   
@@ -111,12 +112,12 @@ $(document).ready(function() {
 	if(isVisible && e.target.id !== "dropdown-menu"){
 		dropDown.style.display = "none";
 		window.removeEventListener("click", dropDownHideListener)
+		isVisible = false;
 	} else {
 		dropDown.style.display = "block";
 		setTimeout(10, ()=>window.addEventListener("click", dropDownHideListener, {once: true}))
+		isVisible = true;
 	}
-	
-	isVisible = !isVisible;
   });
 
   /// Geolocation
