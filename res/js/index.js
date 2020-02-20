@@ -101,15 +101,19 @@ $(document).ready(function() {
   /// Dropdown menu
   const dropDown = document.getElementById("dropdown-menu");
   let isVisible = false;
+  const dropDownHideListener = ()=>
+	  dropDown.style.display = "none";
+  
   document.getElementById("nav-hamburger").addEventListener("click", () => {
-    dropDown.style.display = isVisible ? "none" : "block";
-    isVisible = !isVisible;
-  });
-  window.addEventListener("click", e => {
-    if (e.path[1].id === "nav-hamburger") return;
-
-    dropDown.style.display = "none";
-    isVisible = false;
+	if(isVisible){
+		dropDown.style.display = "none";
+		window.removeEventListener("click", dropDownHideListener)
+	} else {
+		dropDown.style.display = "block";
+		window.addEventListener("click", dropDownHideListener, {once: true})
+	}
+	
+	isVisible = !isVisible;
   });
 
   /// Geolocation
